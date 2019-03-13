@@ -16,8 +16,6 @@
 # =========================== #
 GOROOT=/usr/local/go
 GOPATH=~/go_workspace
-CGO_ENABLED=0
-TFWKS=~/tf_workspace
 
 # =========================== #
 # go validation
