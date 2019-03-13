@@ -1,21 +1,32 @@
 #!/bin/bash
-# ------------------------------------------------------------------------------------
-#
-# This script will update or install the terraform provider for vRealize Automation 7
-# and it's depencies:
-#                   go version:         1.11.5
-#                   git version:        latest
-#                   terraform version:  0.11.11
-# ------------------------------------------------------------------------------------
-# Server needs to have access to internet for this script to run without any 
-# intervention
-# ------------------------------------------------------------------------------------
+: <<description
+ =================================================================================================================================================
+   Disclaimer
+ =================================================================================================================================================
+ This code is not officially supported and is provided as is.
+ Although I intend to maintain these as best as i can, the code below may stop working with future release.
+ I will provide as much information and comments in this code to guide you.
+ I intend to manage error exception in the best i can, although some exceptions may not be trapped. If you encounter some issue, please let me 
+ know.
 
+ =================================================================================================================================================
+ Description: This script will update or install the terraform provider for vRealize Automation 7 and it's depencies
+                   go version         1.11.5
+                   git version        latest
+                   terraform version  0.11.11
+ -------------------------------------------------------------------------------------------------------------------------------------------------
+ Test Environment:	linux CentOS 7.5
+  
+ -------------------------------------------------------------------------------------------------------------------------------------------------
+ Requirements: Server needs to have access to internet for this script to run without any intervention
+               Script was ran with root access, for non root user, please add the sudo prefix
+ -------------------------------------------------------------------------------------------------------------------------------------------------
+description
 # =========================== #
 # local variables declaration
 # =========================== #
 GOROOT=/usr/local/go
-GOPATH=~/go_workspace
+GOPATH=~/go_workspace#
 
 # =========================== #
 # go validation
